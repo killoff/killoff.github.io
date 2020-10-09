@@ -1,3 +1,4 @@
+
 <style>
     .button {
         width: 100%;
@@ -43,6 +44,7 @@
         if (intervals.hasOwnProperty(btn.id)) {
             clearInterval(intervals[btn.id]);
         }
+        countdown.innerHTML = seconds--;
         intervals[btn.id] = setInterval(function() {
             if (seconds >= 0) {
                 countdown.innerHTML = seconds--;
@@ -52,7 +54,7 @@
 
 </script>
 <body>
-    <button class="button ra-button" id="ra_button" onclick="countdown(this, 23);"><!--ARMOR--> <span class="countdown">0</span></button>
-    <button class="button mega-button" id="mega_button" onclick="countdown(this, 33);"><!--MEGA--> <span class="countdown">0</span></button>
-    <button class="button quad-button" id="quad_button" onclick="countdown(this, 115);"><!--QUAD--> <span class="countdown">0</span></button>
+<button class="button ra-button" id="ra_button" onclick="countdown(this, 23);"><!--ARMOR--> <span class="countdown">0</span></button>
+<button class="button mega-button" id="mega_button" onclick="countdown(this, 33);"><!--MEGA--> <span class="countdown">0</span></button>
+<button class="button quad-button" id="quad_button" onclick="countdown(this, 115);"><!--QUAD--> <span class="countdown">0</span></button>
 </body>
